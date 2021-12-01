@@ -41,5 +41,4 @@ class BlackJackDeck(Deck):
                 i.point_val = 13
 
     def pick_random_card(self):
-        self.cards[randint(0, len(self.cards) - 1)].card_info()
         return self.cards[randint(0, len(self.cards) - 1)]
