@@ -1,4 +1,5 @@
 from . import card
+from random import randint
 
 class Deck:
 
@@ -38,3 +39,7 @@ class BlackJackDeck(Deck):
                 i.point_val = 10
             if i.string_val == "Ace":
                 i.point_val = 13
+
+    def pick_random_card(self):
+        self.cards[randint(0, len(self.cards) - 1)].card_info()
+        return self.cards[randint(0, len(self.cards) - 1)]
