@@ -39,8 +39,16 @@ def play_game():
             break
 
         elif score > 21:
-            print("Sorry, you lose")
+            print("Sorry, you lose.")
             break
+
+        elif dealer_score == 17:
+            if score > dealer_score:
+                print("You win!")
+                break
+            else:
+                print("Sorry, you lose.")
+                break
         
         hit = input("Would you like to hit? y or n ")
         while hit == "y":
